@@ -2,7 +2,7 @@
 rm(list=ls(all=TRUE))
 cat("\014")
 
-# Install and load tidyverse
+ # Install and load tidyverse
 if (!require("tidyverse")) install.packages("tidyverse")
 library(tidyverse)
 
@@ -21,7 +21,7 @@ SNOHOMISH$incr_cases <- 1
 View(SNOHOMISH)
 
 # Calculate values for other than first row using FOR loop
-
+     
 for (i in 2:n) {
   SNOHOMISH$incr_cases[i] <- (SNOHOMISH$cases[i]-SNOHOMISH$cases[i-1]) 
 }
@@ -50,7 +50,7 @@ for (i in 1:n) {
 
 View(SNOHOMISH)
 
-# Replot
+  # Replot
 
 p <- ggplot(data = SNOHOMISH,
             mapping = aes(x = date,
@@ -130,4 +130,5 @@ p = ggplot() +
        subtitle = "Red = Above Average, Green = Below Average",
        caption = "Source: NY Times")
 p
+
 
